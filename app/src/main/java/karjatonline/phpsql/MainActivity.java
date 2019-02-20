@@ -37,9 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnSubmit;
     EditText etName;
-    String url = "https://wwwkarjatonlinecom.000webhostapp.com/addc.php";
+    String url="http://thekarjat.com/addRKarjat.php";
+//    String url = "https://wwwkarjatonlinecom.000webhostapp.com/addc.php";
 //    String url2="http://192.168.0.107/school/get.php";
-    String url2 = "https://wwwkarjatonlinecom.000webhostapp.com/getdata.php";
+    String url2="http://thekarjat.com/getKarjat.php";
+    //String url2 = "https://wwwkarjatonlinecom.000webhostapp.com/getdata.php";
 
     StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
@@ -60,8 +62,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ArrayList nameValuePairs = new ArrayList();
+                String str=etName.getText().toString();
+                if(str.contains("'")){
+                    str=str.replace("'","''");
+                }
 
-                nameValuePairs.add(new BasicNameValuePair("name", etName.getText().toString()));
+
+                nameValuePairs.add(new BasicNameValuePair("name", str));
 
 
                 StrictMode.setThreadPolicy(policy);
@@ -129,8 +136,8 @@ public class MainActivity extends AppCompatActivity {
                     heroes = new String[jsonArray.length()];
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject obj = jsonArray.getJSONObject(i);
-                        heroes[i] = obj.getString("srno")+" "+obj.getString("name");
-//                        heroes[i][1] = obj.getString("name");
+//                        heroes[i] = obj.getString("srno")+" "+obj.getString("name");
+                        heroes[i] = obj.getString("bizname");
                     }
                     for(int i=0;i<heroes.length;i++){
                     //    Log.d("*/ forloop",heroes[i]);
