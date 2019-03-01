@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnSubmit;
     EditText etName;
-    String url="http://thekarjat.com/addRKarjat.php";
-//    String url = "https://wwwkarjatonlinecom.000webhostapp.com/addc.php";
+//    String url="http://thekarjat.com/addRKarjat.php";
+    String url = "https://wwwkarjatonlinecom.000webhostapp.com/addc.php";
 //    String url2="http://192.168.0.107/school/get.php";
-    String url2="http://thekarjat.com/getKarjat.php";
+    String url2="http://thekarjat.com/getkarjat.php";
     //String url2 = "https://wwwkarjatonlinecom.000webhostapp.com/getdata.php";
 
     StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
