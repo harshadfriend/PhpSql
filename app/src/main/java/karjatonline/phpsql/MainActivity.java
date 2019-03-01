@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etName;
 //    String url="http://thekarjat.com/addRKarjat.php";
     String url = "https://wwwkarjatonlinecom.000webhostapp.com/addc.php";
+
 //    String url2="http://192.168.0.107/school/get.php";
     String url2="http://thekarjat.com/getkarjat.php";
     //String url2 = "https://wwwkarjatonlinecom.000webhostapp.com/getdata.php";
